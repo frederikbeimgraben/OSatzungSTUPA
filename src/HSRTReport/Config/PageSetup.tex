@@ -1,0 +1,63 @@
+% !TEX root = ../HSRTReport.cls
+% ==============================================================================
+% Page Setup Configuration Module
+% ==============================================================================
+% Description: Page layout configuration including headers, footers, and styling
+% Author: Frederik Beimgraben
+% License: Creative Commons CC BY 4.0
+% ==============================================================================
+
+% ==============================================================================
+% Required Packages
+% ==============================================================================
+\RequirePackage{ifthen}
+\RequirePackage{xcolor}
+\RequirePackage{etoolbox}
+\RequirePackage[singlespacing=true]{scrlayer-scrpage}
+\clearpairofpagestyles
+
+% ==============================================================================
+% Header and Footer Setup
+% ==============================================================================
+\AtEndDocument{
+  \immediate\write\@auxout{\string\gdef\string\@lastpage{\thepage}}
+}
+
+% ------------------------------------------------------------------------------
+% Header and Footer Configuration
+% ------------------------------------------------------------------------------
+% Left header: Chapter number and title
+% Right header: Document title
+% Left footer: Author and module name
+% Center footer: Page number
+\setkomafont{pageheadfoot}{\color{gray}\blenderfont}
+\setkomafont{pagenumber}{\color{gray}\blenderfont}
+\setlength{\footskip}{35pt}
+
+\ohead*{
+  \ifnum\value{chapter}>0\relax
+    \Roman{\thechapter}~–~\Chaptername
+	\fi
+}
+
+\ifoot{\@author}
+
+\cfoot{
+  \ifnum\value{chapter}>0\relax
+    Seite~\thepage\@ifundefined{@lastpage}{}{~von~\@lastpage}
+	\fi
+}
+
+\ohead{
+  \ifnum\value{chapter}>0\relax
+    \thechapter~–~\Chaptername
+	\fi
+}
+
+\ihead{\@title}
+
+\pagestyle{scrheadings}
+
+% ==============================================================================
+% End of Page Setup Module
+% ==============================================================================
