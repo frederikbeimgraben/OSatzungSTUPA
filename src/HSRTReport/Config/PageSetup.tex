@@ -14,7 +14,7 @@
 \RequirePackage{xcolor}
 \RequirePackage{etoolbox}
 \RequirePackage[singlespacing=true]{scrlayer-scrpage}
-\clearpairofpagestyles
+%\clearpairofpagestyles
 
 % ==============================================================================
 % Header and Footer Setup
@@ -32,29 +32,20 @@
 % Center footer: Page number
 \setkomafont{pageheadfoot}{\color{gray}\blenderfont}
 \setkomafont{pagenumber}{\color{gray}\blenderfont}
-\setlength{\footskip}{35pt}
+\setlength{\footskip}{60pt}
+\setlength{\headheight}{30pt}
+\setlength{\footheight}{30pt}
 
-\ohead*{
-  \ifnum\value{chapter}>0\relax
-    \Roman{\thechapter}~–~\Chaptername
-	\fi
-}
+\ifoot[Stand \lastChanged]{Stand \lastChanged}
+\ofoot*{}
+\ifoot{Stand \lastChanged}
 
-\ifoot{\@author}
-
-\cfoot{
-  \ifnum\value{chapter}>0\relax
-    Seite~\thepage\@ifundefined{@lastpage}{}{~von~\@lastpage}
-	\fi
-}
-
-\ohead{
-  \ifnum\value{chapter}>0\relax
-    \thechapter~–~\Chaptername
-	\fi
-}
-
-\ihead{\@title}
+\cfoot{Seite~\thepage\@ifundefined{@lastpage}{}{~von~\@lastpage}}
+\ihead{\ifnum\value{page}=1\else\@title\fi}
+\renewcommand{\chaptermark}[1]{\markright{\MakeUppercase{#1}}}
+\renewcommand{\sectionmark}[1]{\markleft{#1}}
+\ohead*{\rightmark\\\leftmark}
+\chead*{}
 
 \pagestyle{scrheadings}
 

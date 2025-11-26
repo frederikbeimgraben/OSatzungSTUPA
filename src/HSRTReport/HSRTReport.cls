@@ -92,11 +92,11 @@
 % Configuration Modules
 % ------------------------------------------------------------------------------
 \input{\classPath/Config/Hyperref}
-\input{\classPath/Config/Bibliography}
+%\input{\classPath/Config/Bibliography}
 \input{\classPath/Config/Fonts}
 \input{\classPath/Config/PageSetup}
 \input{\classPath/Config/Sections}
-\input{\classPath/Config/GlossarySettings}
+%\input{\classPath/Config/GlossarySettings}
 \input{\classPath/Config/ToC}
 \input{\classPath/Config/Typography}
 \input{\classPath/Config/PageBreakControl}
@@ -123,22 +123,11 @@
 % Add Pages
 % ------------------------------------------------------------------------------
 \AtBeginDocument{
-  \frontmatter
-  \typeout{INFO – Selected Report Variant: \ReportVariant}
   \maketitle
   \newpage
-  \def\istitlepage=\false
   \setstretch{1.0}
  	\tableofcontents
-  \mainmatter
-}
-
-\AtEndEnvironment{document}{
+  \markright{Inhaltsverzeichnis}
+  \markleft{}
   \newpage
-  \appendix
-  \backmatter
-  \cfoot*{}% Remove page number at footer.
-  \ohead*{}% Addd page number to the header.
-  % \makeglossarypages
-  \makebib
 }
