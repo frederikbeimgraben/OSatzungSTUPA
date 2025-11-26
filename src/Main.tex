@@ -27,13 +27,16 @@
     footerlogos         % Footer logos
 ]{HSRTReport/HSRTReport}
 
+\renewcommand{\thesubsection}{§ \arabic{subsection}}
+\renewcommand{\thechapter}{\Roman{chapter}}
+\usepackage{soul}
+\newcommand{\hlrem}{~\relax\hl{[\dots]}\relax~}
+
 % ------------------------------------------------------------------------------
 % Preamble and Configuration
 % ------------------------------------------------------------------------------
 % Load document-specific settings and configurations
 \input{Metadata}         % Document metadata
-
-\renewcommand{\thesubsection}{§ \arabic{subsection}}
 
 % ==============================================================================
 % Document Body
@@ -49,6 +52,7 @@
 \input{Chapters/03_dezentrale_orga.tex}
 \input{Chapters/04_vollversammlung.tex}
 \input{Chapters/05_vermoegen.tex}
+\input{Chapters/06_schlussbest.tex}
 
 \end{document}
 % ==============================================================================

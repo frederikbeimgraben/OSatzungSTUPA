@@ -23,17 +23,17 @@
 
 % Get formatted title page data table
 \DeclareRobustCommand{\GetTitlePageDataTable}{
-	\begin{tabular}{@{} p{50mm} p{\textwidth-30mm-2\tabcolsep}}
+	\begin{tabular}{@{} p{70mm} p{\textwidth-30mm-2\tabcolsep}}
 		\the\titlePageData
 	\end{tabular}
 }
 
 \renewcommand{\maketitle}{
 	\providecommand{\titlepageabstract}{%
-		Dies ist ein Beispiel für ein Abstract. Es sollte eine kurze Zusammenfassung des Inhalts des Seminars sein.
+	...
 	}
 	\providecommand{\titlepagekeywords}{%
-		Seminararbeit, Beispiel, Abstract, Zusammenfassung, Inhaltsverzeichnis
+	...
 	}
 	\setlength{\imageHeight}{2cm*\real{\mainLogoScale}*\real{\logosScale}}
 	\begin{titlepage}
@@ -76,7 +76,7 @@
 		\end{flushleft}
 
 		% abstract
-		\vspace{2em}
+		\vspace{1em}
 		\setstretch{1.0}
 		\vspace{-1em}
 		\titlepageabstract

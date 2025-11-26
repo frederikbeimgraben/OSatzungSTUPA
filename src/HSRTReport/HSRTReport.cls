@@ -126,8 +126,8 @@
   \maketitle
   \newpage
   \setstretch{1.0}
+  \pagestyle{tocpage}
  	\tableofcontents
-  \markright{Inhaltsverzeichnis}
-  \markleft{}
   \newpage
+  \pagestyle{scrheadings}
 }

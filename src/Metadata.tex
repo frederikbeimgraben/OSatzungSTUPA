@@ -20,12 +20,13 @@
 % Example: \newcommand{\waterMarkText}{DRAFT}
 % Example: \newcommand{\waterMarkText}{CONFIDENTIAL}
 \newcommand{\waterMarkText}{}
-\newcommand{\lastChanged}{XX.XX.20XX}
+\newcommand{\lastChanged}{\hl{XX. Monat 20XX}}
+\newcommand{\acceptedUniversity}{\hl{XX. Monat 20XX}}
 
 % Document creation date
 % Format: DD.MM.YYYY
 % This date appears on the title page and in document metadata
-\createdon{XX.XX.20XX}
+\createdon{\lastChanged}
 
 % ------------------------------------------------------------------------------
 % Document Title
@@ -48,9 +49,10 @@
 % --- Author Information ---
 % Student name, semester, and contact information
 \author{STUPA der Hochschule Reutlingen}
-\AddTitlePageDataLine{Vom STUPA Angenommen}{XX. Monat 20XX}
-\AddTitlePageDataLine{Vom Präsidium bestätigt}{XX. Monat 20XX}
-\AddTitlePageDataLine{In Kraft getreten}{XX. Monat 20XX}
+\AddTitlePageDataLine{Urabstimmung vom}{16. April 2013}
+\AddTitlePageDataLine{Vorangegangene Fassung vom}{12. Dezember 2018}
+\AddTitlePageDataLine{Vom STUPA angenommen am}{\lastChanged}
+\AddTitlePageDataLine{Vom Präsidium bestätigt am}{\acceptedUniversity}
 
 \newcommand{\titlepageabstract}{%
   \section*{Rechtsgrundlage}
@@ -59,11 +61,14 @@
   Art. 2 des Gesetzes zur Einführung einer Verfassten Studierendenschaft und zur Stärkung der
   akademischen Weiterbildung (Verfasste-Studierendenschafts-Gesetz – VerfStudG) hat die
   Studierendenschaft der Hochschule Reutlingen in der Urabstimmung vom 16. April 2013, zuletzt
-  geändert am XX.XX.20XX durch Beschluss des Studierendenparlaments, die nachfolgende
+  geändert am \lastChanged~durch Beschluss des Studierendenparlaments, die nachfolgende
   Organisationssatzung beschlossen.
 
-  Die Hochschule Reutlingen hat durch Beschluss des Präsidiums am XX.XX.20XX die
-  Organisationssatzung genehmigt.
+  Die Hochschule Reutlingen hat die Organisationssatzung durch Beschluss des Präsidiums am \acceptedUniversity~genehmigt.
+
+  \section*{Anlass der Änderung}
+  Die Änderung vom \lastChanged~hat den primären Zweck, die Organisationssatzung an die infolge der neuen Fakultät
+  „NXT“ geänderten Vertreter:innen-Anzahl anzupassen. Darüber hinaus wurden mehrere Fehler behoben und die Formulierung vereinfacht.
 
   \section*{Präambel}
   Im Folgenden wird aus Gründen der besseren Lesbarkeit ausschließlich die männliche Form

@@ -36,16 +36,28 @@
 \setlength{\headheight}{30pt}
 \setlength{\footheight}{30pt}
 
-\ifoot[Stand \lastChanged]{Stand \lastChanged}
 \ofoot*{}
 \ifoot{Stand \lastChanged}
 
 \cfoot{Seite~\thepage\@ifundefined{@lastpage}{}{~von~\@lastpage}}
 \ihead{\ifnum\value{page}=1\else\@title\fi}
-\renewcommand{\chaptermark}[1]{\markright{\MakeUppercase{#1}}}
-\renewcommand{\sectionmark}[1]{\markleft{#1}}
+\let\oldmarkright\markright
+\renewcommand{\markright}[1]{\oldmarkright{\MakeUppercase{#1}}}
+\let\oldmarkleft\markleft
+\renewcommand{\markleft}[1]{}
+\renewcommand{\markboth}[2]{}
+\renewcommand{\chaptermark}[1]{\markright{\Roman{chapter}. \MakeUppercase{#1}}}
+\renewcommand{\sectionmark}[1]{\oldmarkleft{#1}}
 \ohead*{\rightmark\\\leftmark}
 \chead*{}
+
+\newpairofpagestyles{tocpage}{
+  \ohead{INHALT\\~}
+  \ofoot{}
+  \ihead{\@title}
+  \ifoot{Stand \lastChanged}
+  \cfoot{Seite~\thepage\@ifundefined{@lastpage}{}{~von~\@lastpage}}
+}
 
 \pagestyle{scrheadings}
 
