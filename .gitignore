@@ -31,7 +31,7 @@ build/
 *.alg
 *.acr
 *.acn
-*.pdf
+Main.pdf
 *.lol
 *.fmt
 
