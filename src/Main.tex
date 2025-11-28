@@ -24,12 +24,14 @@
     DIV=20,             % Type area calculation
     onecolumn,          % Column layout
     variant=meti,       % Report variant (default: meti)
-    footerlogos         % Footer logos
+    footerlogos,        % Footer logos
+    numbers=noenddot
 ]{HSRTReport/HSRTReport}
 
 \renewcommand{\thesubsection}{§ \arabic{subsection}}
-\renewcommand{\thechapter}{\Roman{chapter}}
-\usepackage{soul}
+\renewcommand{\thechapter}{\Roman{chapter}.}
+\usepackage{proofread}
+\renewcommand{\hl}[1]{\hilite{#1}}
 \newcommand{\hlrem}{~\relax\hl{[\dots]}\relax~}
 
 % ------------------------------------------------------------------------------
