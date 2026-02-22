@@ -20,8 +20,21 @@
 % Example: \newcommand{\waterMarkText}{DRAFT}
 % Example: \newcommand{\waterMarkText}{CONFIDENTIAL}
 \newcommand{\waterMarkText}{}
-\newcommand{\lastChanged}{\hl{XX. Monat 20XX}}
-\newcommand{\acceptedUniversity}{\hl{XX. Monat 20XX}}
+\newcommand{\lastChanged}{19. Februar 2026}
+\newcommand{\lastChangedFooter}{Fassung vom 19.02.2026}
+\newcommand{\dateWidth}{2cm}
+\newcommand{\acceptedUniversity}{\raisebox{-0.05cm}{\TextField[
+	print,
+	name=acceptedUniversity,
+	width=\dateWidth,
+	color=black,
+	bordercolor=white,
+	value=XX.XX.20XX,
+	align=1,
+	height=0.4cm,
+	altname={Vom Präsidium bestätigt am},
+	onmouseover={if (event.target.display == display.hidden) event.target.display = display.visible;}
+]{}}}
 
 % Document creation date
 % Format: DD.MM.YYYY
@@ -51,8 +64,8 @@
 \author{STUPA der Hochschule Reutlingen}
 \AddTitlePageDataLine{Urabstimmung vom}{16. April 2013}
 \AddTitlePageDataLine{Vorangegangene Fassung vom}{12. Dezember 2018}
-\AddTitlePageDataLine{Vom STUPA angenommen am}{\lastChanged}
-\AddTitlePageDataLine{Vom Präsidium bestätigt am}{\acceptedUniversity}
+\AddTitlePageDataLine{Vom STUPA beschlossen am}{\lastChanged}
+\AddTitlePageDataLine{Vom Präsidium genehmigt am}{\acceptedUniversity}
 
 \newcommand{\titlepageabstract}{%
   \section*{Rechtsgrundlage}
@@ -69,9 +82,9 @@
   \section*{Anlass der Änderung}
   Die Änderung vom \lastChanged~hat den primären Zweck, die Organisationssatzung an die infolge der neuen Fakultät
   „NXT“ geänderten Vertreter:innen-Anzahl anzupassen. Darüber hinaus wurden mehrere Fehler behoben und die Formulierung vereinfacht.
-  Es wurde die Möglichkeit geschaffen, Referatsleitungen für ihr Engagement zu entschädigen.
+  Es wurde die Möglichkeit geschaffen, Arbeitskreisleitungen für ihr Engagement zu belohnen.
   Die Rolle der Fachschaften wurde genauer definiert.
-  Den Referaten und Fachschaften wird eine umfangreichere finanzielle Selbstbestimmung ermöglicht.
+  Den Arbeitskreisen und Fachschaften wird eine umfangreichere finanzielle Selbstbestimmung ermöglicht.
   Es wird eine Stimmrechtsübertragung ermöglicht.
 
   \section*{Präambel}
